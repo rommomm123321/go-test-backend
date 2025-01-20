@@ -7,6 +7,8 @@ type MembershipType struct {
 	Price        float64 `json:"price"`
 	Duration     int     `json:"duration"`
 	Limited      bool    `json:"limited"`
+	Description  string  `json:"description"`
+	Image_url    string  `json:"image_url"`
 	CreatedAt    string  `json:"created_at"`
 	UpdatedAt    string  `json:"updated_at"`
 }
