@@ -12,6 +12,8 @@ type Authorization interface {
 }
 
 type SportsHall interface {
+	Create(userId int, data app.SportsHall) (app.SportsHall, error)
+	GetAll(userId int) ([]app.SportsHall, error)
 }
 
 type Service struct {
@@ -22,5 +24,6 @@ type Service struct {
 func NewService(r *repository.Repository) *Service {
 	return &Service{
 		Authorization: NewAuthService(r.Authorization),
+		SportsHall:    NewSportsHallService(r.SportsHall),
 	}
 }

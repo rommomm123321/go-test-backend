@@ -11,6 +11,8 @@ type Authorization interface {
 }
 
 type SportsHall interface {
+	Create(userId int, data app.SportsHall) (app.SportsHall, error)
+	GetAll(userId int) ([]app.SportsHall, error)
 }
 
 type Repository struct {
@@ -21,5 +23,6 @@ type Repository struct {
 func NewRepository(db *sqlx.DB) *Repository {
 	return &Repository{
 		Authorization: NewAuthRepository(db),
+		SportsHall:    NewSportsHallRepository(db),
 	}
 }
