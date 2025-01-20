@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS members;
+
+DROP TABLE IF EXISTS membership_types;
+
+DROP TABLE IF EXISTS disciplines;
+
+DROP TABLE IF EXISTS sports_halls;
+
+DROP TABLE IF EXISTS users;
